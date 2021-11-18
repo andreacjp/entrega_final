@@ -4,6 +4,12 @@ body {
 	background-image: url('https://besthqwallpapers.com/Temp/18-11-2021/linear-icons-4k-art-dark-background-references-besthqwallpapers.com-3840x2400.jpg');
 }
 
+header {
+	text-align: center;
+	color: #fff;
+	font-family: 'Permanent Marker', cursive;
+}
+
 h1,h2,h4,h5,h6{
 	font-weight: 400;
 	color: #f8f9fa;
