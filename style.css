@@ -4,14 +4,15 @@ header {
 	text-align: center;
 	color: #fff;
 	font-family: 'Permanent Marker', cursive;
-	display: block;
 }
 
 #titulo-index {
 	font-family: 'Permanent Marker', cursive;
 	text-align: center;
 	color: #fff;
-	padding-top: 20%;
+	margin: auto;
+	display: block;
+	vertical-align: center;
 }
 
 h2,h4,h5,h6{
