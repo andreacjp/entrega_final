@@ -4,6 +4,7 @@ header {
 	text-align: center;
 	color: #fff;
 	font-family: 'Permanent Marker', cursive;
+	display: block;
 }
 
 #titulo-index {
