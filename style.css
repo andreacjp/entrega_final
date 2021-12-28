@@ -1,39 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Josefin+Sans:wght@300&display=swap');
 
 header {
 	text-align: center;
 	color: #fff;
-	font-family: 'Permanent Marker', cursive;
+	font-family: 'Dancing Script', cursive;
+	font-weight: 700;
 }
 
 #titulo-index {
-	font-family: 'Permanent Marker', cursive;
+	font-family: 'Dancing Script', cursive;
 	text-align: center;
 	color: #fff;
 	margin: auto;
 	display: block;
 	vertical-align: center;
+	font-weight: 700;
 }
 
 h2,h4,h5,h6{
 	font-weight: 400;
 	color: #f8f9fa;
-	font-family: 'Permanent Marker', cursive;
+	font-family: 'Dancing Script', cursive;
 }
 
 h1{
 	color: #fff;
-	font-family: 'Nunito Sans', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 p {
 	color: #fff;
-	font-family: 'Nunito Sans', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 a {
 	color: #fff;
-	font-family: 'Nunito Sans', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 	text-decoration: none;
 }
 
