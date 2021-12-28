@@ -20,7 +20,7 @@
             <main class="container">
                 <section class="row">
                     <div class="col py-5">
-                        <ul id="meses" class="list-unstyled"></ul>
+                        <ul id="mes" class="list-unstyled"></ul>
                     </div>
                 </section>
             </main>
@@ -33,21 +33,21 @@
             </footer>
         </div>
         <script>
-            const meses = [
-                { codigo: "1", nombre: "Enero" },
-                { codigo: "2", nombre: "Febrero" },
-                { codigo: "3", nombre: "Marzo" },
-                { codigo: "4", nombre: "Abril" },
-                { codigo: "5", nombre: "Mayo" },
-                { codigo: "6", nombre: "Junio" },
-                { codigo: "7", nombre: "Julio" },
-                { codigo: "8", nombre: "Agosto" },
-                { codigo: "9", nombre: "Septiembre" },
-                { codigo: "10", nombre: "Octubre" },
-                { codigo: "11", nombre: "Noviembre" },
-                { codigo: "12", nombre: "Diciembre" },
+            const mes = [
+                { codigo: "Enero", nombre: "Enero" },
+                { codigo: "Febrero", nombre: "Febrero" },
+                { codigo: "Marzo", nombre: "Marzo" },
+                { codigo: "Abril", nombre: "Abril" },
+                { codigo: "Mayo", nombre: "Mayo" },
+                { codigo: "Junio", nombre: "Junio" },
+                { codigo: "Julio", nombre: "Julio" },
+                { codigo: "Agosto", nombre: "Agosto" },
+                { codigo: "Septiembre", nombre: "Septiembre" },
+                { codigo: "Octubre", nombre: "Octubre" },
+                { codigo: "Noviembre", nombre: "Noviembre" },
+                { codigo: "Diciembre", nombre: "Diciembre" },
             ];
-            const aqui = document.querySelector("#meses");
+            const aqui = document.querySelector("#mes");
             indicadores.forEach(i => {
                 aqui.innerHTML += "<li><a href='page.html?cod=" + i.codigo + "'>" + i.nombre + " </a></li>"
             });
