@@ -27,25 +27,25 @@
         </div>
  
           <script>
-            var cual = new URLSearchParams(window.location.search).get("cod");
+                  var cual = new URLSearchParams(window.location.search).get("fecha");
             console.log(cual);
-
-            fetch("https://sheet.best/api/sheets/85aa8093-1945-4d10-99ae-fdf1b1158467" + codigo)
+            
+            fetch("https://sheet.best/api/sheets/85aa8093-1945-4d10-99ae-fdf1b1158467")
                 .then((response) => response.json())
                 .then((datos) => {
                     console.log(datos);
                     var aqui = document.getElementsByTagName("main")[0];
                     datos.reverse();
                     datos.forEach((d) => {
-                        if(d.mes == cual){
+                        if(d.titulo == cual){
                         foto_id = d.foto.split("=").pop();
                         foto_util = "https://drive.google.com/uc?export=view&id=" + foto_id;
                         //con lo que sigue creamos los "post" de nuestro "blog"
-                        aqui.innerHTML += '<div class="col-md-8 mx-auto mb-5"><img src="' + foto_util + '" class="w-50 mx-auto my-3 shadow"><p class="lead">' + d.fecha + "</p><p>" + "</p></div>";
-                        }
+                        aqui.innerHTML += '<div class="col-md-8 mx-auto mb-5"><h2>' + d.titulo + '</h2><img src="' + foto_util + '" class="w-50 mx-auto my-3 shadow"></div>";
                     });
                 })
                 .catch((error) => console.log("¡PLW!", error));
+           
         </script>
     </body>
 </html>
