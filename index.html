@@ -17,21 +17,12 @@
                     <span id="titulo-index" style="font-size: 2.5em;">Bienvenido a mi Blog de Fotos</span>
                 </div>
             </header>
-            <main class="row text-center py-5">
-                <nav class="nav flex-column">
-                    <a class="nav-link" href="#">Enero</a>
-                    <a class="nav-link" href="#">Febrero</a>
-                    <a class="nav-link" href="#">Marzo</a>
-                    <a class="nav-link" href="#">Abril</a>
-                    <a class="nav-link" href="#">Mayo</a>
-                    <a class="nav-link" href="#">Junio</a>
-                    <a class="nav-link" href="#">Julio</a>
-                    <a class="nav-link" href="#">Agosto</a>
-                    <a class="nav-link" href="#">Septiembre</a>
-                    <a class="nav-link" href="#">Octubre</a>
-                    <a class="nav-link" href="#">Noviembre</a>
-                    <a class="nav-link" href="#">Diciembre</a>
-                </nav>
+            <main class="container">
+                <section class="row">
+                    <div class="col py-5">
+                        <ul id="meses" class="list-unstyled"></ul>
+                    </div>
+                </section>
             </main>
             <footer class="row border-top">
                 <div class="col py-2">
@@ -42,17 +33,24 @@
             </footer>
         </div>
         <script>
-            fetch("https://sheet.best/api/sheets/85aa8093-1945-4d10-99ae-fdf1b1158467")
-                .then((response) => response.json())
-                .then((datos) => {
-                    console.log(datos);
-                    var aqui = document.getElementsByTagName("nav-link")[0];
-                    datos.reverse();
-                    datos.forEach((d) => {
-                        aqui.innerHTML += '<div class="col-md-4 mb-5"><h2>' + '</h2><p><a href="page.html?mes=' + d.mes + '"></a></p></div>';
-                    });
-                })
-                .catch((error) => console.log("¡PLW!", error));
+            const mes = [
+                { codigo: "1", nombre: "Enero" },
+                { codigo: "2", nombre: "Febrero" },
+                { codigo: "3", nombre: "Marzo" },
+                { codigo: "4", nombre: "Abril" },
+                { codigo: "5", nombre: "Mayo" },
+                { codigo: "6", nombre: "Junio" },
+                { codigo: "7", nombre: "Julio" },
+                { codigo: "8", nombre: "Agosto" },
+                { codigo: "9", nombre: "Septiembre" },
+                { codigo: "10", nombre: "Octubre" },
+                { codigo: "11", nombre: "Noviembre" },
+                { codigo: "12", nombre: "Diciembre" },
+            ];
+            const aqui = document.querySelector("#meses");
+            indicadores.forEach(i => {
+                aqui.innerHTML += "<li><a href='page.html?cod=" + i.codigo + "'>" + i.nombre + " </a></li>"
+            });
         </script>
     </body>
 </html>
