@@ -17,12 +17,7 @@
                     <span id="titulo-index" style="font-size: 2.5em;">Bienvenido a mi Blog de Fotos</span>
                 </div>
             </header>
-            <main class="container">
-                <section class="row">
-                    <div class="col py-5">
-                        <ul id="mes" class="list-unstyled"></ul>
-                    </div>
-                </section>
+             <main class="row text-center py-5"></main>
             </main>
             <footer class="row border-top">
                 <div class="col py-2">
@@ -33,24 +28,19 @@
             </footer>
         </div>
         <script>
-            const mes = [
-                { codigo: "Enero", nombre: "Enero" },
-                { codigo: "Febrero", nombre: "Febrero" },
-                { codigo: "Marzo", nombre: "Marzo" },
-                { codigo: "Abril", nombre: "Abril" },
-                { codigo: "Mayo", nombre: "Mayo" },
-                { codigo: "Junio", nombre: "Junio" },
-                { codigo: "Julio", nombre: "Julio" },
-                { codigo: "Agosto", nombre: "Agosto" },
-                { codigo: "Septiembre", nombre: "Septiembre" },
-                { codigo: "Octubre", nombre: "Octubre" },
-                { codigo: "Noviembre", nombre: "Noviembre" },
-                { codigo: "Diciembre", nombre: "Diciembre" },
-            ];
-            const aqui = document.querySelector("#mes");
-            indicadores.forEach(i => {
-                aqui.innerHTML += "<li><a href='page.html?cod=" + i.codigo + "'>" + i.nombre + " </a></li>"
-            });
+            fetch("https://sheet.best/api/sheets/85aa8093-1945-4d10-99ae-fdf1b1158467")
+                .then((response) => response.json())
+                .then((datos) => {
+                    console.log(datos);
+                    var aqui = document.getElementsByTagName("main")[0];
+                    datos.reverse();
+                    datos.forEach((d) => {
+                        foto_id = d.foto.split("=").pop();
+                        foto_util = "https://drive.google.com/uc?export=view&id=" + foto_id;
+                        aqui.innerHTML += '<div class="col-md-4 mb-5"><h2>' + d.fecha + '</h2><img src="' + foto_util + '" class="w-50 mx-auto my-3 shadow"><p><a href="page.html?fecha='+d.titulo+'">ver más grande</a></p></div>';
+                    });
+                })
+                .catch((error) => console.log("¡PLW!", error));
         </script>
     </body>
 </html>
