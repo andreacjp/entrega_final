@@ -27,10 +27,10 @@
         </div>
  
           <script>
-            var cual = new URLSearchParams(window.location.search).get("titular");
+            var cual = new URLSearchParams(window.location.search).get("cod");
             console.log(cual);
 
-            fetch("https://sheet.best/api/sheets/85aa8093-1945-4d10-99ae-fdf1b1158467")
+            fetch("https://sheet.best/api/sheets/85aa8093-1945-4d10-99ae-fdf1b1158467" + codigo)
                 .then((response) => response.json())
                 .then((datos) => {
                     console.log(datos);
