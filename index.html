@@ -46,10 +46,10 @@
                 .then((response) => response.json())
                 .then((datos) => {
                     console.log(datos);
-                    var aqui = document.getElementsByTagName("main")[0];
+                    var aqui = document.getElementsByTagName("nav-link")[0];
                     datos.reverse();
                     datos.forEach((d) => {
-                        aqui.innerHTML += '<div class="col-md-4 mb-5"><h2>' + '</h2><p><a href="page.html?mes=' + d.mes + '">d.mes</a></p></div>';
+                        aqui.innerHTML += '<div class="col-md-4 mb-5"><h2>' + '</h2><p><a href="page.html?mes=' + d.mes + '"></a></p></div>';
                     });
                 })
                 .catch((error) => console.log("¡PLW!", error));
