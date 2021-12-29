@@ -27,7 +27,7 @@
         </div>
  
           <script>
-                  var cual = new URLSearchParams(window.location.search).get("fecha");
+                  var cual = new URLSearchParams(window.location.search).get("titulo");
             console.log(cual);
             
             fetch("https://sheet.best/api/sheets/85aa8093-1945-4d10-99ae-fdf1b1158467")
@@ -37,7 +37,7 @@
                     var aqui = document.getElementsByTagName("main")[0];
                     datos.reverse();
                     datos.forEach((d) => {
-                        if(d.fecha == cual){
+                        if(d.titulo == cual){
                         foto_id = d.foto.split("=").pop();
                         foto_util = "https://drive.google.com/uc?export=view&id=" + foto_id;
                         //con lo que sigue creamos los "post" de nuestro "blog"
