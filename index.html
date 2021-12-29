@@ -37,7 +37,7 @@
                     datos.forEach((d) => {
                         foto_id = d.foto.split("=").pop();
                         foto_util = "https://drive.google.com/uc?export=view&id=" + foto_id;
-                        aqui.innerHTML += '<div class="col-md-4 mb-5"><h2>' + d.fecha + '</h2><img src="' + foto_util + '" class="w-50 mx-auto my-3 shadow"><p><a href="page.html?fecha='+d.titulo+'">ver más grande</a></p></div>';
+                        aqui.innerHTML += '<div class="col-md-4 mb-5"><h2>' + d.fecha + '</h2><img src="' + foto_util + '" class="w-50 mx-auto my-3 shadow"><p><a href="page.html?titular='+d.titulo+'">ver más grande</a></p></div>';
                     });
                 })
                 .catch((error) => console.log("¡PLW!", error));
