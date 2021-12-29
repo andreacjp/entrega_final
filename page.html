@@ -29,7 +29,7 @@
           <script>
                   var cual = new URLSearchParams(window.location.search).get("titular");
             console.log(cual);
-            
+
             fetch("https://sheet.best/api/sheets/85aa8093-1945-4d10-99ae-fdf1b1158467")
                 .then((response) => response.json())
                 .then((datos) => {
@@ -42,10 +42,10 @@
                         foto_util = "https://drive.google.com/uc?export=view&id=" + foto_id;
                         //con lo que sigue creamos los "post" de nuestro "blog"
                         aqui.innerHTML += '<div class="col-md-8 mx-auto mb-5"><h2>' + d.fecha + '</h2><img src="' + foto_util + '" class="w-50 mx-auto my-3 shadow"></div>";
+                        }
                     });
                 })
                 .catch((error) => console.log("¡PLW!", error));
-           
         </script>
     </body>
 </html>
