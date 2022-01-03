@@ -11,23 +11,19 @@ body {
 	color: #fff;
 }
 
-#titulo-index {
-	font-family: 'Dancing Script', cursive;
-	text-align: center;
-	color: #fff;
-	margin: auto;
-	display: block;
-	vertical-align: center;
-	font-weight: 700;
-}
-
-h2,h4,h5,h6{
+h2{
 	font-weight: 400;
-	color: #f8f9fa;
+	color: #fff;
 	font-family: 'Dancing Script', cursive;
 }
 
 h1{
+	font-weight: 700;
+	color: #fff;
+	font-family: 'Dancing Script', cursive;
+}
+
+h4{
 	color: #fff;
 	font-family: 'Josefin Sans', sans-serif;
 }
