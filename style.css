@@ -7,6 +7,10 @@ header {
 	font-weight: 700;
 }
 
+body {
+	color: #fff;
+}
+
 #titulo-index {
 	font-family: 'Dancing Script', cursive;
 	text-align: center;
