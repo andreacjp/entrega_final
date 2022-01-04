@@ -7,20 +7,18 @@
         <link href="style.css" rel="stylesheet" />
         <title>Blog Fotos</title>
     </head>
-    <body class="p-3 mb-2 bg-dark bg-gradient style="--bs-bg-opacity: 0.3;">
-            <header class="row border-bottom">
-                    <h1 class="display-1">Bienvenido a mi blog de fotos<h1>
-            </header>
-             <main class="row text-center py-5"></main>
-            </main>
-            <footer class="row border-top">
-                <div class="col py-2">
-                    <p class="fs-5 fw-bold d-flex justify-content-between align-items-center">
-                        <a href="https://github.com/andreacjp" class="link-light text-decoration-none">Andrea Jiménez</a> <a href="https://github.com/profesorfaco/interaccion" class="link-light text-decoration-none">AUD5V0010</a>
-                    </p>
-                </div>
-            </footer>
-        </div>
+    <body class="p-3 mb-2 bg-dark bg-gradient" style="--bs-bg-opacity: 0.3;">
+        <header class="row border-bottom">
+            <h1 class="display-1">Bienvenido a mi blog de fotos</h1>
+        </header>
+        <main class="row text-center py-5"></main>
+        <footer class="row border-top">
+            <div class="col py-2">
+                <p class="fs-5 fw-bold d-flex justify-content-between align-items-center">
+                    <a href="https://github.com/andreacjp" class="link-light text-decoration-none">Andrea Jiménez</a> <a href="https://github.com/profesorfaco/interaccion" class="link-light text-decoration-none">AUD5V0010</a>
+                </p>
+            </div>
+        </footer>
         <script>
             fetch("https://sheet.best/api/sheets/85aa8093-1945-4d10-99ae-fdf1b1158467")
                 .then((response) => response.json())
@@ -31,7 +29,14 @@
                     datos.forEach((d) => {
                         foto_id = d.foto.split("=").pop();
                         foto_util = "https://drive.google.com/uc?export=view&id=" + foto_id;
-                        aqui.innerHTML += '<div class="col-md-4 mb-5"><h2 class="fs-3">' + d.titular + '</h2><img src="' + foto_util + '" class="img-thumbnail w-50 h-auto mx-auto my-3 shadow"><p><a href="page.html?titular='+d.titular+'" class="text-decoration-none">ver más grande</a></p></div>';
+                        aqui.innerHTML +=
+                            '<div class="col-md-4 mb-5"><h2 class="fs-3">' +
+                            d.titular +
+                            '</h2><img src="' +
+                            foto_util +
+                            '" class="img-thumbnail w-50 h-auto mx-auto my-3 shadow"><p><a href="page.html?titular=' +
+                            d.titular +
+                            '" class="text-decoration-none">ver más grande</a></p></div>';
                     });
                 })
                 .catch((error) => console.log("¡PLW!", error));
